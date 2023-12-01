@@ -1,22 +1,26 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './app/**/*.{html,js,jsx}',
-    './components/**/*.{html,js,jsx}',
-    './sections/**/*.{html,js,jsx}',
-    './styles/**/*.{js,jsx}',
+    "./src/**/*.{js,jsx,ts,tsx}",
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'
   ],
-  mode: 'jit',
   theme: {
-    extend: {
-      colors: {
-        'primary-black': '#1A232E',
-        'secondary-white': '#c7c7c7',
-      },
-      transitionTimingFunction: {
-        'out-flex': 'cubic-bezier(0.05, 0.6, 0.4, 0.9)',
-      },
+    colors: {
+      titleColor: '#444',
+      primaryText: '#3b6b67',
+      primary: '#A6D8D4',
+      secondary: '#8EAF9D',
+      backgroundPrimary: '#D7DAE5',
+      backgroundSecondary: '#6B7D7D',
+      primaryDark: '#F05941',
+      secondaryDark: '#BE3144',
+      backgroundPrimaryDark: '#22092C',
+      backgroundSecondaryDark: '#872341'
     },
+
+    extend: {},
   },
-  plugins: [],
-};
+  plugins: [
+    require('flowbite/plugin')
+  ]
+}
