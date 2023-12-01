@@ -54,6 +54,7 @@ const Header = () => {
 
   useEffect(() => {
     handleChange();
+    // eslint-disable-next-line
   }, [])
 
   return (
