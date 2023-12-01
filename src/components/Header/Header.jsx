@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCloudMoon, faFile, faSun } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
@@ -10,15 +10,51 @@ const Header = () => {
 
   const [darkState, setDarkState] = useState(false);
 
+  const userPref = window.localStorage.getItem('theme')
+  const mediaQuery = window.matchMedia("(prefer-color-scheme: dark)")
+
+  const handleChange = () => {
+    if (userPref) {
+      let check = userPref === 'dark' ? 'dark' : 'light';
+      setDarkState(check === 'dark' ? true : false);
+      console.log('userPref', check, darkState)
+      if (check === 'dark') {
+        document.documentElement.classList.add('dark');
+        window.localStorage.setItem('theme', 'dark')
+      } else {
+        document.documentElement.classList.remove('dark');
+        window.localStorage.setItem('theme', 'light')
+      }
+    } else {
+      let check = mediaQuery.matches ? 'dark' : 'light';
+      setDarkState(check === 'dark' ? true : false);
+      console.log('MediaQuery', check, darkState)
+      
+      if (check === 'dark') {
+        document.documentElement.classList.add('dark');
+        window.localStorage.setItem('theme', 'dark')
+      } else {
+        document.documentElement.classList.remove('dark');
+        window.localStorage.setItem('theme', 'light')
+      }
+    }
+  }
+
   const toggleDarkTheme = () => {
-    setDarkState(!darkState);
+    setDarkState(!darkState)
 
     if (!darkState) {
       document.documentElement.classList.add('dark');
+      window.localStorage.setItem('theme', 'dark')
     } else {
       document.documentElement.classList.remove('dark');
+      window.localStorage.setItem('theme', 'light')
     }
   }
+
+  useEffect(() => {
+    handleChange();
+  }, [])
 
   return (
     <header className='w-full transition-all duration-300'>
