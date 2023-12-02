@@ -70,7 +70,7 @@ const Header = () => {
           <div className="flex gap-3 max-[600px]:justify-center">
             <a href='https://www.linkedin.com/in/javier-alejandro-vargas-ortega/' target='_blank' rel='noreferrer' className="my-auto"><FontAwesomeIcon icon={faLinkedin} className="text-[2em] text-[#0a66c2] transition-all duration-75 my-auto dark:text-gray-200" /></a>
             <a href='https://github.com/javivy' target='_blank' rel='noreferrer' className="my-auto"><FontAwesomeIcon icon={faGithub} className="text-[2em] text-[#000] transition-all duration-75 my-auto mx-auto dark:text-gray-200" /></a>
-            <a href='https://github.com/javivy' target='_blank' rel='noreferrer' className="my-auto bg-primary rounded-lg text-primaryText px-2 py-1 font-bold text-center hover:bg-[#b7fef8] dark:bg-primaryDark dark:text-gray-200 transition-all duration-100 ease-in-out"><FontAwesomeIcon icon={faFile} className="text-[#3b6b67] my-auto mx-auto text-center dark:text-gray-200" /> My Resume </a>
+            <a href='https://drive.google.com/file/d/1ZKT-Bnc8laTATskRBwwO43WHUchvvTK8/view?usp=drive_link' target='_blank' rel='noreferrer' className="my-auto bg-primary rounded-lg text-primaryText px-2 py-1 font-bold text-center hover:bg-[#b7fef8] dark:bg-primaryDark dark:text-gray-200 transition-all duration-100 ease-in-out"><FontAwesomeIcon icon={faFile} className="text-[#3b6b67] my-auto mx-auto text-center dark:text-gray-200" /> My Resume </a>
           </div>
         </div>
       </div>
