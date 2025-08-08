@@ -19,7 +19,7 @@ const Projects = () => {
         <div className="flex gap-5 max-[600px]:flex-col">
           <a
             href="https://javivy.github.io/capstone-1/index.html"
-            className="inline-block group rounded-lg overflow-hidden shadow-[0px_0px_0px_4px_#A6D8D4] mb-5 hover:shadow-[0px_0px_0px_7px_#8EAF9D] dark:shadow-[0px_0px_0px_4px_#BE3144] dark:hover:shadow-[0px_0px_0px_7px_#BE3144] transition-all duration-200 w-[18rem] h-[14rem] max-[600px]:h-full max-[600px]:w-full max-[600px]:mb-0"
+            className="inline-block group rounded-lg overflow-hidden shadow-[0px_0px_0px_4px_#A6D8D4] mb-5 hover:shadow-[0px_0px_0px_7px_#8EAF9D] dark:shadow-[0px_0px_0px_4px_theme(colors.primaryDark)] dark:hover:shadow-[0px_0px_0px_7px_theme(colors.primaryDark)] transition-all duration-200 w-[18rem] h-[14rem] max-[600px]:h-full max-[600px]:w-full max-[600px]:mb-0"
             rel="noreferrer"
             target="_blank"
           >
@@ -81,7 +81,7 @@ const Projects = () => {
                 target="_blank"
                 rel="noreferrer"
                 style={kanitFont}
-                className="bg-titleColor p-2 rounded-lg text-white transition-all duration-100 font-bold hover:bg-[#5f5f5f]"
+                className="bg-primaryDark p-2 rounded-lg text-white transition-all duration-100 font-bold hover:bg-secondaryDark"
               >
                 Source <FontAwesomeIcon icon={faCode} className="ml-2" />
               </a>
@@ -90,7 +90,7 @@ const Projects = () => {
                 target="_blank"
                 rel="noreferrer"
                 style={kanitFont}
-                className="bg-titleColor p-2 rounded-lg text-white transition-all duration-100 font-bold hover:bg-[#5f5f5f]"
+                className="bg-primaryDark p-2 rounded-lg text-white transition-all duration-100 font-bold hover:bg-secondaryDark"
               >
                 Live <FontAwesomeIcon icon={faLink} className="ml-2" />
               </a>
@@ -100,7 +100,7 @@ const Projects = () => {
         <div className="flex gap-5 mt-4 max-[600px]:mt-[5rem] max-[600px]:flex-col max-[600px]:mb-[4rem]">
           <a
             href="https://javivy.github.io/capstone-1/index.html"
-            className="inline-block group rounded-lg overflow-hidden shadow-[0px_0px_0px_4px_#A6D8D4] mb-5 hover:shadow-[0px_0px_0px_7px_#8EAF9D] dark:shadow-[0px_0px_0px_4px_#BE3144] dark:hover:shadow-[0px_0px_0px_7px_#BE3144] transition-all duration-200 w-[18rem] h-[14rem] max-[600px]:h-full max-[600px]:w-full"
+            className="inline-block group rounded-lg overflow-hidden shadow-[0px_0px_0px_4px_#A6D8D4] mb-5 hover:shadow-[0px_0px_0px_7px_#8EAF9D] dark:shadow-[0px_0px_0px_4px_theme(colors.primaryDark)] dark:hover:shadow-[0px_0px_0px_7px_theme(colors.primaryDark)] transition-all duration-200 w-[18rem] h-[14rem] max-[600px]:h-full max-[600px]:w-full"
             rel="noreferrer"
             target="_blank"
           >
@@ -172,7 +172,7 @@ const Projects = () => {
                 target="_blank"
                 rel="noreferrer"
                 style={kanitFont}
-                className="bg-titleColor p-2 rounded-lg text-white transition-all duration-100 font-bold hover:bg-[#5f5f5f]"
+                className="bg-primaryDark p-2 rounded-lg text-white transition-all duration-100 font-bold hover:bg-secondaryDark"
               >
                 Source <FontAwesomeIcon icon={faCode} className="ml-2" />
               </a>
@@ -181,7 +181,7 @@ const Projects = () => {
                 target="_blank"
                 rel="noreferrer"
                 style={kanitFont}
-                className="bg-titleColor p-2 rounded-lg text-white transition-all duration-100 font-bold hover:bg-[#5f5f5f]"
+                className="bg-primaryDark p-2 rounded-lg text-white transition-all duration-100 font-bold hover:bg-secondaryDark"
               >
                 Live <FontAwesomeIcon icon={faLink} className="ml-2" />
               </a>
@@ -255,7 +255,8 @@ const Projects = () => {
                 Budget App
               </h3>
               <p className="text-gray-500">
-                Ruby on Rails Project. PostgreSQL Database, CRUD Operations, Login and Registration System.
+                Ruby on Rails Project. PostgreSQL Database, CRUD Operations,
+                Login and Registration System.
               </p>
               <ul className="mt-2 flex gap-2">
                 <li className="relative group flex flex-col justify-center">
