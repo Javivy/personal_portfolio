@@ -10,7 +10,7 @@ const Projects = () => {
   return (
     <div>
       <h2
-        className="text-primaryText/70 font-bold text-3xl mb-10 dark:text-primaryDark"
+        className="text-primaryText/70 font-bold text-3xl mb-10 dark:text-secondaryDark"
         style={kanitFont}
       >
         Projects <FontAwesomeIcon icon={faCode} />

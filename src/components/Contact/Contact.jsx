@@ -1,8 +1,8 @@
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 import React, { useRef } from "react";
-import SendTwoToneIcon from '@mui/icons-material/SendTwoTone';
+import SendTwoToneIcon from "@mui/icons-material/SendTwoTone";
 
 const Contact = () => {
   const SERVICE_ID = "service_58zkfg8";
@@ -18,30 +18,47 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
-      .then((result) => {
-          console.log(result.text);
-          document.querySelector('.modal-element').classList.add('scale-100', 'translate-y-0');
-          setTimeout(() => {
-            document.querySelector('.modal-element').classList.remove('scale-100', 'translate-y-[0]');
-            document.querySelector('.modal-element').classList.add('scale-0', '-translate-y-[150%]');
-          }, '3000')
-          document.getElementById('my-form').reset();
-        }, (error) => {
-          console.log(error.text);
-          document.getElementById('my-form').reset();
-      });
-
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
+      (result) => {
+        console.log(result.text);
+        document
+          .querySelector(".modal-element")
+          .classList.add("scale-100", "translate-y-0");
+        setTimeout(() => {
+          document
+            .querySelector(".modal-element")
+            .classList.remove("scale-100", "translate-y-[0]");
+          document
+            .querySelector(".modal-element")
+            .classList.add("scale-0", "-translate-y-[150%]");
+        }, "3000");
+        document.getElementById("my-form").reset();
+      },
+      (error) => {
+        console.log(error.text);
+        document.getElementById("my-form").reset();
+      }
+    );
   };
 
   return (
     <div>
-      <h3 className="text-3xl text-primaryText/70 font-bold dark:text-primaryDark" style={kanitFont}>
+      <h3
+        className="text-3xl text-primaryText/70 font-bold dark:text-secondaryDark"
+        style={kanitFont}
+      >
         Contact <FontAwesomeIcon icon={faEnvelope} className="ml-2" />
       </h3>
       <section class="bg-white dark:bg-backgroundPrimaryDark">
         <div class="py-8 lg:py-16">
-          <form ref={form} action="#" class="space-y-8" id="my-form" style={kanitFont} onSubmit={sendEmail}>
+          <form
+            ref={form}
+            action="#"
+            class="space-y-8"
+            id="my-form"
+            style={kanitFont}
+            onSubmit={sendEmail}
+          >
             <div>
               <label
                 for="from_email"

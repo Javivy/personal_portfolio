@@ -15,7 +15,10 @@ const Experience = () => {
 
   return (
     <div>
-      <h2 className="text-primaryText/70 font-bold text-3xl dark:text-primaryDark" style={h2Font}>
+      <h2
+        className="text-primaryText/70 font-bold text-3xl dark:text-secondaryDark"
+        style={h2Font}
+      >
         Experience <FontAwesomeIcon icon={faBriefcase} className="ml-2" />
       </h2>
       <div className="my-5">

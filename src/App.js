@@ -17,7 +17,7 @@ function App() {
       style={font}
       className="flex justify-center dark:bg-backgroundPrimaryDark"
     >
-      <div className="mx-[3rem] md:mx-0 md:w-[75%] lg:w-1/2 dar:text-primaryTextDark">
+      <div className="mx-[3rem] md:mx-0 md:w-[75%] lg:w-1/2 dark:text-secondaryDark">
         <Header />
         <Separator />
         <Experience />
